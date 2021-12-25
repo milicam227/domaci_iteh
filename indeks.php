@@ -1,3 +1,38 @@
+<?php
+
+require "dbBroker.php";
+require "model/user.php";
+
+session_start();
+if(isset($_POST['username']) && isset($_POST['password'])){
+    $uname = $_POST['username'];
+    $upass = $_POST['password'];
+
+   
+    $korisnik = new User(1, $uname, $upass);
+    
+    $odg = User::logInUser($korisnik, $conn); 
+
+    if($odg->num_rows==1){
+        echo  `
+        <script>
+        console.log( "Uspešno ste se prijavili");
+        </script>
+        `;
+        $_SESSION['user_id'] = $korisnik->id;
+        header('Location: home.php');
+        exit();
+    }else{
+        echo `
+        <script>
+        console.log( "Niste se prijavili!");
+        </script>
+        `;
+    }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,13 +73,30 @@
         </defs>
         <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
       </svg>
+
+
+
+
       <div class="form">
-        <label for="email">Email</label>
-        <input type="email" id="email">
-        <label for="password">Password</label>
-        <input type="password" id="password">
-        <input type="submit" id="submit" value="Submit">
+        
+          <form method="POST" action="#">
+            
+                <label for="email">Username</label>
+                <input type="text" id="email" name="username" class="form-control"  required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+                <input type="submit" id="submit" class="btn btn-primary" name="submit" value="Submit"></button>
+            
+          </form>
+        
       </div>
+      
+
+
+      
+
+        
+    </div>
     </div>
   </div>
 </div>
