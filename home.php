@@ -118,7 +118,7 @@ else{
 
 
 
-<div class="modal" id="volontirajModal"  role="dialog"  style=" background-color:#b9ebff">
+<div class="modal" id="prikaziModal"  role="dialog"  style=" background-color:#b9ebff">
     <div class="div12" style=" background-color:#b9ebff">
 
         
