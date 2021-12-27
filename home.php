@@ -1,3 +1,27 @@
+<?php
+
+require "dbBroker.php";
+require "model/prijava.php";
+
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit();
+}
+
+$rezultat=Prijava::getAll($conn);
+
+if(!$rezultat){
+    echo("Neuspesna konekcija");
+    die();
+}
+else{
+
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,13 +77,13 @@
             </thead>
             <tbody>
             <?php
-                    while ($red = $data->fetch_array()) :
+                    while ($red = $rezultat->fetch_array()) :
                     ?>
                 <tr >
-                    <td><?php echo $red["izvodjac"] ?></td>
+                    <td><?php echo $red["naziv"] ?></td>
                     <td><?php echo $red["datum"] ?></td>
                     <td><?php echo $red["mesto"] ?></td>
-                    <td><?php echo $red["idVolonter"] ?></td>
+                    <td><?php echo $red["organizator"] ?></td>
                     <td >
                         <label class="oznaci">
                         <input type="radio" name="cekiranje" value=<?php echo $red["idPrijava"] ?>>
@@ -70,7 +94,7 @@
                 </tr>
                 <?php
                     endwhile;
-                
+                    }
                 ?>
             </tbody>
         </table>
@@ -126,7 +150,7 @@
                                 </div><br>
                                 <div class="form-group">
                                 <label for="">Organizator: </label>
-                                    <input type="text"  name="idVolonter" class="form-control"/>
+                                    <input type="text"  name="user_id" class="form-control"/>
                                 </div><br>
                                 
                                 <div class="form-group">

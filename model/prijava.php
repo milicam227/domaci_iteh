@@ -1,21 +1,20 @@
 <?php
 class Prijava{
     public $id;   
-    public $predmet;   
-    public $katedra;   
-    public $sala;   
-    public $datum;
+    public $naziv;   
+    public $datum;   
+    public $mesto;   
+    public $organizator;
     
-    public function __construct($id=null, $predmet=null, $katedra=null, $sala=null, $datum=null)
+    public function __construct($id=null, $naziv=null, $datum=null, $mesto=null, $organizator=null)
     {
         $this->id = $id;
-        $this->predmet = $predmet;
-        $this->katedra = $katedra;
-        $this->sala = $sala;
+        $this->naziv = $naziv;
         $this->datum = $datum;
+        $this->mesto = $mesto;
+        $this->organizator = $organizator;
     }
 
-    #funkcija prikazi sve getAll
 
     public static function getAll(mysqli $conn)
     {
@@ -23,7 +22,7 @@ class Prijava{
         return $conn->query($query);
     }
 
-    #funkcija getById
+
 
     public static function getById($id, mysqli $conn){
         $query = "SELECT * FROM prijave WHERE id=$id";
@@ -39,7 +38,7 @@ class Prijava{
 
     }
 
-    #deleteById
+  
 
     public function deleteById(mysqli $conn)
     {
@@ -47,17 +46,17 @@ class Prijava{
         return $conn->query($query);
     }
 
-    #update
+
     public function update($id, mysqli $conn)
     {
-        $query = "UPDATE prijave set predmet = $this->predmet,katedra = $this->katedra,sala = $this->sala,datum = $this->datum WHERE id=$id";
+        $query = "UPDATE prijave set naziv = $this->naziv,datum = $this->datum,mesto = $this->mesto,organizator = $this->organizator WHERE id=$id";
         return $conn->query($query);
     }
 
-    #insert add
+
     public static function add(Prijava $prijava, mysqli $conn)
     {
-        $query = "INSERT INTO prijave(predmet, katedra, sala, datum) VALUES('$prijava->predmet','$prijava->katedra','$prijava->sala','$prijava->datum')";
+        $query = "INSERT INTO prijave(naziv, datum, mesto, organizator) VALUES('$prijava->naziv','$prijava->datum','$prijava->mesto','$prijava->organizator')";
         return $conn->query($query);
     }
 }
