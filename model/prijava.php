@@ -28,8 +28,9 @@ class Prijava{
         $query = "SELECT * FROM prijave WHERE id=$id";
 
         $myObj = array();
-        if($msqlObj = $conn->query($query)){
-            while($red = $msqlObj->fetch_array(1)){
+        $rezultat= $conn->query($query)
+        if($rezultat){
+            while($red = $rezultat->fetch_array(1)){
                 $myObj[]= $red;
             }
         }
