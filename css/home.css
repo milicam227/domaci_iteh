@@ -6,8 +6,9 @@
    
 }
 
+
 h1{
-    background-color: #b9ebff;
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 10px;
     text-align: center;  
@@ -18,7 +19,7 @@ h1{
 p{
     background-color: #b9ebff;
     text-align: center;
-    margin-left: 175px;
+    margin-left: 370px;
     display: inline-block;
     font-weight: bolder;
     animation: mover 6s linear infinite;
@@ -39,8 +40,11 @@ p{
     }
 }
 .div1{
-    background-color: #b9ebff;
+
+  
+
     float:center;
+   
    
     
 }
@@ -60,6 +64,7 @@ p{
 
 .div5{
     align-content: center;
+    
     margin-left: 600px;  
 }
 
@@ -155,10 +160,10 @@ button{
     margin-left: 670px;
 }
 .col-md-12{
-    margin-left: 670px;
+    margin-left: 645px;
 }
 .div10{
-    margin-left: 670px;
+    margin-left: 650px;
 }
 
 div.modal-content{
@@ -208,6 +213,8 @@ div.modal-content{
      margin-left: 5px;
 }
 table{
+
+    
    margin-left: 400px;
 }
 table,tr,td{
@@ -216,7 +223,7 @@ table,tr,td{
 }
 
 table,tr,th,thead{
-    
+
 background-color: #2b91b9;
 text-align: center;
 }
@@ -224,3 +231,4 @@ text-align: center;
 .oznaci{
 background-color:white;
 }
+

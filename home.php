@@ -40,6 +40,11 @@ else{
 
 <div class="div1" ><h1>Zakazivanje projekata studentskih organizacija</h1></div> <br><br><br>
 
+<p> Na Fakultetu organizacionih nauka postoji veliki broj studentskih organizacija koje organizuju razne projekte.<br> Preko ove aplikacije je moguće ispratiti detalje o projektima, odnosno naziv, datum i mesto održavanja, kao i organizatora.<br><br><br><br></p>
+
+
+
+
 <div class="row"  >
     <div class="div3">
         <button id="vidi"  class="btn_vidi" 
@@ -56,7 +61,7 @@ else{
     <div class="div5"> 
  
             
-            <input type="text" id="ulaz" onkeyup="nadji()" placeholder="Pretraži projekte po organizatoru" >
+            <input type="text" id="ulaz" onkeyup="nadji()" placeholder="Pretraži projekte po nazivu" >
         
     </div><br>
 </div>
@@ -99,10 +104,7 @@ else{
             </tbody>
         </table>
         <div class="row" >
-            <div class="div8" >
-                <button id="azuriraj" class="btn_azuriraj" data-toggle="modal" data-target="#azurirajModal">AŽURIRAJ</button>
-                
-            </div>
+            
 
             
             <div class="col-md-12" >
@@ -115,6 +117,12 @@ else{
         </div>
     </div>
 </div>
+
+
+
+
+
+
 
 
 
@@ -170,63 +178,7 @@ else{
 
 
 
- <div class="modal" id="azurirajModal" role="dialog"  style=" background-color: #FFDAB9">
-    <div class="div24" style=" background-color: #FFDAB9">
-
-     
-        <div class="modal-content" style=" background-color:#FFDAB9">
-            <div class="div26" style=" background-color:#FFDAB9">
-                <button type="button" class="zatvori" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="div27" >
-                <div class="div28">
-                    <form action="#" method="post" id="azuriranje">
-                        <h3 >Ažuriraj projekat</h3>
-                        <div class="row">
-                            <div class="div30">
-                                <div class="div31">
-                                    <input id="idPrijava" type="text" name="idPrijava" class="frm"
-                                           placeholder="idPrijava *" value="" readonly />
-                                </div><br>
-                                <div class="div32">
-                                    <input id="izvodjac" type="text" name="izvodjac" class="frm"
-                                           placeholder="izvodjac *" value=""/>
-                                </div><br>
-                                <div class="div35">
-                                    <input id="datum" type="date" name="datum" class="frm"
-                                           placeholder="datum *" value=""/>
-                                </div><br>
-                                <div class="div33">
-                                    <input id="mesto" type="text" name="mesto" class="frm"
-                                           placeholder="mesto *" value=""/>
-                                </div><br>
-                                <div class="div34">
-                                    <input id="idVolonter" type="text" name="idVolonter" class="frm"
-                                           placeholder="idVolonter *" value=""/>
-                                </div><br>
-                                
-                                <div class="div36">
-                                    <button id="btnIzmeni" type="submit" class="izmeni"
-                                           > Izmeni
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="div37">
-                <button type="button" class="kraj " data-dismiss="modal">Kraj</button>
-            </div>
-        </div>
-
-
-
-</div>
-
-</div>
-
+ 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

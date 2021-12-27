@@ -48,6 +48,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
   <div class="container">
     <div class="left">
       <div class="login">Login</div>
+      <div class="eula">Aplikacija za praćenje projekata studentskih organizacija</div>
       
     </div>
     <div class="right">
