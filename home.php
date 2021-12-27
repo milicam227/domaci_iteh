@@ -47,7 +47,7 @@ else{
     </div><br>
     
     <div class="div4">
-            <button id="prijavise" type="button" class="btn_prijavise" data-toggle="modal" data-target="#volontirajModal">Zakaži</button>
+            <button id="prijavise" type="button" class="btn_prijavise" data-toggle="modal" data-target="#prikaziModal">Zakaži</button>
 
         </div>
     
@@ -56,7 +56,7 @@ else{
     <div class="div5"> 
  
             <button id="nadji" class="btn_pretraga" > Pretraži projekte</button><br>
-            <input type="text" id="ulaz" onkeyup="nadji()" placeholder="Pretraži koncerte po izvođaču" >
+            <input type="text" id="ulaz" onkeyup="nadji()" placeholder="Pretraži projekte po organizatoru" >
         
     </div><br>
 </div>
@@ -230,15 +230,42 @@ else{
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
     
   
-    
 
 
 
 
+<script>
+
+        function sortirajTabelu() {
+            console.log("Pozvana");
+            var table, rows, s, i, a, b, shouldS;
+            table = document.getElementById("tabela");
+            s = true;
+
+            while (s) {
+                s = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldS = false;
+                    a = rows[i].getElementsByTagName("td")[1];
+                    b = rows[i + 1].getElementsByTagName("td")[1];
+                    if (a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase()) {
+                        shouldS = true;
+                        break;
+                    }
+                }
+                if (shouldS) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    s = true;
+                }
+            }
+        }
+
+</script>
 
 
 
