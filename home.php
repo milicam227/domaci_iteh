@@ -55,7 +55,7 @@ else{
     <br>
     <div class="div5"> 
  
-            <button id="nadji" class="btn_pretraga" > Pretraži projekte</button><br>
+            
             <input type="text" id="ulaz" onkeyup="nadji()" placeholder="Pretraži projekte po organizatoru" >
         
     </div><br>
@@ -264,6 +264,29 @@ else{
                 }
             }
         }
+
+
+
+
+        function nadji() {
+            var unos, filter, table, tr, td, i, txtValue;
+            unos = document.getElementById("ulaz");
+            filter = unos.value.toUpperCase();
+            table = document.getElementById("tabela");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+       
 
 </script>
 
