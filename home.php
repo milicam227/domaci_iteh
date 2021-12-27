@@ -106,8 +106,7 @@ else{
 
             
             <div class="col-md-12" >
-                    <button id="btn-obrisi" type="button" formmethod="post" class="btn btn-danger" 
-   >UKLONI</button>
+                    <button id="btn-obrisi" type="button" formmethod="post" class="btn btn-danger">UKLONI</button>
                 </div>
             <div class="div10"  >
                     <button id="uredi" class="btn_uredi" onclick="sortirajTabelu()">SORTIRAJ</button>
