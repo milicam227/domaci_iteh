@@ -66,13 +66,13 @@ else{
 <div  class="divp" >
 
     <div class="div6" >
-        <table id="tabela" class="tabela_koncerata" border="3" style=" background-color:rgb(230, 105, 105)">
+        <table id="tabela" class="tabela_koncerata" border="3" style=" background-color:rgb(43, 145, 185)">
             <thead class ="zaglavlje">
             <tr >
-                <th scope="kolona" style="background-color:rgb(230, 105, 105) " >Naziv</th>
-                <th scope="kolona" style="background-color:rgb(230, 105, 105) " >Datum</th>    
-                <th scope="kolona" style="background-color:rgb(230, 105, 105) " >Mesto</th>
-                <th scope="kolona" style="background-color:rgb(230, 105, 105) " >Organizator</th>
+                <th scope="kolona" style="background-color:rgb(43, 145, 185) " >Naziv</th>
+                <th scope="kolona" style="background-color:rgb(43, 145, 185) " >Datum</th>    
+                <th scope="kolona" style="background-color:rgb(43, 145, 185) " >Mesto</th>
+                <th scope="kolona" style="background-color:rgb(43, 145, 185) " >Organizator</th>
             </tr>
             </thead>
             <tbody>
@@ -86,7 +86,7 @@ else{
                     <td><?php echo $red["organizator"] ?></td>
                     <td >
                         <label class="oznaci">
-                        <input type="radio" name="cekiranje" value=<?php echo $red["idPrijava"] ?>>
+                        <input type="radio" name="cekiranje" value=<?php echo $red["id"] ?>>
                                     <span class="checkmark"></span>
                         </label>
                     </td>
@@ -119,11 +119,11 @@ else{
 
 
 
-<div class="modal" id="volontirajModal"  role="dialog"  style=" background-color:#FFDAB9">
-    <div class="div12" style=" background-color:#FFDAB9">
+<div class="modal" id="volontirajModal"  role="dialog"  style=" background-color:#b9ebff">
+    <div class="div12" style=" background-color:#b9ebff">
 
         
-        <div class="modal-content" style=" background-color:#FFDAB9">
+        <div class="modal-content" style=" background-color:#b9ebff">
             <div class="div14">
                 <button type="button" class="zatvori" data-dismiss="modal">&times;</button>
             </div>
@@ -135,7 +135,7 @@ else{
                             <div class="div16 ">
                                 <div class="form-group">
                                     <label for="">Naziv: </label>
-                                    <input type="text"  name="izvodjac" class="form-control"/> 
+                                    <input type="text"  name="naziv" class="form-control"/> 
                                 </div><br>
                                 <div class="div18">
                                 <div class="form-group">
@@ -150,11 +150,11 @@ else{
                                 </div><br>
                                 <div class="form-group">
                                 <label for="">Organizator: </label>
-                                    <input type="text"  name="user_id" class="form-control"/>
+                                    <input type="text"  name="organizator" class="form-control"/>
                                 </div><br>
                                 
                                 <div class="form-group">
-                                        <button id="btnDodaj" type="submit" class="btn btn-success btn-block">Zakazi</button>
+                                        <button id="btnDodaj" type="submit" class="btn btn-success btn-block" >Zakazi</button>
                                     </div>
                             </div>
                     </div>
@@ -232,6 +232,7 @@ else{
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     
   
     
