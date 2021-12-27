@@ -24,13 +24,13 @@ class Prijava{
 
 
 
+  
     public static function getById($id, mysqli $conn){
         $query = "SELECT * FROM prijave WHERE id=$id";
 
         $myObj = array();
-        $rezultat= $conn->query($query)
-        if($rezultat){
-            while($red = $rezultat->fetch_array(1)){
+        if($msqlObj = $conn->query($query)){
+            while($red = $msqlObj->fetch_array(1)){
                 $myObj[]= $red;
             }
         }

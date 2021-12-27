@@ -74,7 +74,7 @@ body{
 button{
     margin-top: 10px;
     margin-bottom: 5px;
-    background-color:rgb(255, 255, 255) ;
+    background-color:rgb(43, 145, 185) ;
     border-radius: 10px;
     
     text-align: center;
@@ -95,7 +95,7 @@ button{
 }
 
 #azuriraj{
-    background-color:rgb(255, 255, 255) ;
+    background-color:rgb(43, 145, 185) ;
     margin-top: 20px;
     margin-left: 5px;
 }
@@ -109,7 +109,7 @@ button{
     height: 30px;
     margin-left: -6px;
     
-    background-color:rgb(255, 255, 255) ;
+    background-color:rgb(43, 145, 185) ;
     border-radius: 10px;
    border-color: black;
     color:  rgb(0, 0, 0);
@@ -126,7 +126,9 @@ button{
     margin-left: 85px;
 }
 #btnDodaj{
-    background-color:rgb(255, 255, 255) ;
+    background-color:rgb(43, 145, 185) ;
+    text-shadow: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
     
 }
 #vidi{
