@@ -1,16 +1,3 @@
-$('#vidi').click(function () {
-    $('#tabela').toggle();
-});
-$('#btnUnesi').submit(function () {
-    $('#prikaziModal').modal('toggle');
-    return false;
-});
-
-$('#vidi').submit(function () {
-    $('#azurirajModal').modal('toggle');
-    return false;
-});
-
 
 $('#dodajForm').submit(function(){
     event.preventDefault();
@@ -70,3 +57,19 @@ $('#btn-obrisi').click(function(){
     });
 
 });
+
+
+$('#vidi').click(function () {
+    $('#tabela').toggle();
+});
+$('#btnUnesi').submit(function () {
+    $('#prikaziModal').modal('toggle');
+    return false;
+});
+
+$('#vidi').submit(function () {
+    $('#azurirajModal').modal('toggle');
+    return false;
+});
+
+

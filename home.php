@@ -71,7 +71,7 @@ else{
 <div  class="divp" >
 
     <div class="div6" >
-        <table id="tabela" class="tabela_koncerata" border="3" style=" background-color:rgb(43, 145, 185)">
+        <table id="tabela" class="tabela" border="3" style=" background-color:rgb(43, 145, 185)">
             <thead class ="zaglavlje">
             <tr >
                 <th scope="kolona" style="background-color:rgb(43, 145, 185) " >Naziv</th>
@@ -145,10 +145,10 @@ else{
                                     <input type="text"  name="naziv" class="form-control"/> 
                                 </div><br>
                                 <div class="div18">
-                                <div class="form-group">
-                                    <label for="">Datum: </label>
-                                    <input type="date"   name="datum" class="form-control"/>
-                                </div>
+                                    <div class="form-group">
+                                        <label for="">Datum: </label>
+                                        <input type="date"   name="datum" class="form-control"/>
+                                    </div>
                                 </div><br>
                                 
                                 <div class="form-group">
@@ -156,15 +156,15 @@ else{
                                     <input type="text"  name="mesto" class="form-control"/>
                                 </div><br>
                                 <div class="form-group">
-                                <label for="">Organizator: </label>
+                                    <label for="">Organizator: </label>
                                     <input type="text"  name="organizator" class="form-control"/>
                                 </div><br>
                                 
                                 <div class="form-group">
                                         <button id="btnDodaj" type="submit" class="btn btn-success btn-block" >Zakazi</button>
-                                    </div>
+                                </div>
                             </div>
-                    </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -172,9 +172,10 @@ else{
 
     </div>
 
+</div>
 
 
- </div>
+
 
 
 
