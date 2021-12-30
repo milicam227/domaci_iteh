@@ -1,3 +1,3 @@
 # domaci_iteh
 
-Aplikacija za zakazivanje privatnih časova
+Aplikacija za praćenje projekata studentskih organizacija
